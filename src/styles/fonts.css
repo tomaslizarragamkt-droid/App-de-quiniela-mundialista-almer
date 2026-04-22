@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Work Sans', sans-serif;
+}
+
+h1, h2, h3, .display-font {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.02em;
+}

@@ -1,0 +1,100 @@
+/* Estilos responsivos personalizados para la aplicación Mundial 2026 */
+
+/* Móvil pequeño (320px - 374px) */
+@media (max-width: 374px) {
+  .display-font {
+    letter-spacing: 0.01em;
+  }
+
+  /* Ajuste de padding en contenedores pequeños */
+  .bg-white > div {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+
+/* Móvil (375px - 639px) */
+@media (min-width: 375px) and (max-width: 639px) {
+  /* Mejora de espaciado en tarjetas de partidos */
+  .match-card {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Tablet pequeña (640px - 767px) */
+@media (min-width: 640px) and (max-width: 767px) {
+  /* Optimización de grid para tablets */
+  .grid-cols-3 {
+    gap: 0.75rem;
+  }
+}
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Mejor aprovechamiento del espacio en tablets */
+  .max-w-7xl {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Desktop (1024px+) */
+@media (min-width: 1024px) {
+  /* Hover effects solo en desktop */
+  .hover-lift:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* Landscape en móviles */
+@media (max-width: 896px) and (orientation: landscape) {
+  /* Reducir altura de headers en landscape */
+  header {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  /* Reducir tamaños de fuente en landscape */
+  .display-font {
+    font-size: 0.9em;
+  }
+}
+
+/* Dispositivos con pantallas de alta densidad */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Optimización de bordes y sombras */
+  .shadow-xl {
+    box-shadow: 0 10px 25px -5px rgba(1, 36, 98, 0.1),
+                0 8px 10px -6px rgba(1, 36, 98, 0.1);
+  }
+}
+
+/* Preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    color-scheme: dark;
+  }
+}
+
+/* Print styles */
+@media print {
+  header, footer, nav {
+    display: none;
+  }
+
+  .bg-gradient-to-r,
+  .bg-gradient-to-br {
+    background: #012462 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
