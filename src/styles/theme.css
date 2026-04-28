@@ -142,11 +142,19 @@
     margin: 0 auto;
   }
   .header {
-    width: 15vw;
+    width: 50vw;
     text-align: center;
     align-items: center;
     margin: 0 auto;
     padding: 1rem;
+  }
+  .size_logo {
+    width: 80%;
+  }
+  @media (min-width: 768px) {
+    .size_logo {
+      width: 25vw;
+    }
   }
   html {
     font-size: var(--font-size);
@@ -226,3 +234,47 @@
     }
   }
 }
+
+.soccer {
+  background: url(../img/Soccer_ball.svg);
+  background-size: 100px 100px;
+  height: 100px;
+  width: 100px;
+  top: 50px;
+  z-index: 1000;
+  position: fixed;
+  -webkit-animation:roll 4.5s infinite;
+  -moz-animation:roll 4.5s infinite;
+  animation:roll 4.5s infinite;
+}
+
+.back {
+  background-image: url(../img/Back.webp) !important;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+@-moz-keyframes roll {  
+  0% {left:0px; -webkit-transform: rotate(-360deg);}
+  50% {left:1000px; -webkit-transform: rotate(360deg);}
+  100% {left:0px; -webkit-transform: rotate(-360deg);}
+}
+@-webkit-keyframes roll { 
+  0% {left:0px; -webkit-transform: rotate(-360deg);}
+  50% {left:1000px; -webkit-transform: rotate(360deg);}
+  100% {left:0px; -webkit-transform: rotate(-360deg);}
+}
+
+@keyframes roll { 
+  0% {left:0px; -webkit-transform: rotate(-360deg);}
+  50% {left:1000px; -webkit-transform: rotate(360deg);}
+  100% {left:0px; -webkit-transform: rotate(-360deg);}
+} 
