@@ -4,17 +4,26 @@
     <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <script type="module" src="/src/main.tsx"></script>
       <title>Aplicación Concurso Mundial 2026</title>
       <style>html, body { height: 100%; margin: 0; } #root { height: 100%; }</style>
     </head>
 
-    <body><div id="logo">
+    <body><div id="logo" class="back">
       <header class="header">
-        <img src="img/ALMER_LOGO.png" alt="logo_almer">
+        <img class="size_logo" src="img/ALMER_LOGO.png" alt="logo_almer">
       </header>
+      <div id="ocultar" class="soccer oculto"></div>
     </div>
       <div id="root"></div>
-      <script type="module" src="/src/main.tsx"></script>
+      <script>
+    setTimeout(() => {
+        const elemento = document.getElementById('ocultar');
+        elemento.style.display = 'none';
+        // Alternativamente, puedes usar: elemento.remove();
+        console.log("Elemento ocultado");
+    }, 8000); // 3000ms = 3s
+</script>
     </body>
   </html>
   
